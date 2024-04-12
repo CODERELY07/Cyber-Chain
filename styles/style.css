@@ -48,7 +48,6 @@ header{
     background-color: var(--icon-bg-color);
     padding: 5px;
     clip-path: circle();
-
 }
 .search input{
     width: 90%;
