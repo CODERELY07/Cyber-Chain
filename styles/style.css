@@ -9,6 +9,7 @@
 :root{
     --body-color:#A0C0D8;
     --background-color:#fff;
+    --about-bg-color:#35496C;
     --text-color:#fff;
     --line-color:#000;
     --move-line-color:#fff;
@@ -21,11 +22,11 @@ body{
 }
 
 /* header */
-.logo{
-
+.logo img{
+    height: 60px;
 }
 header{
-    padding: 10px;
+    padding: 20px 10px;
     display: flex;
     max-width: 1400px;
     margin: 0 auto;
@@ -83,6 +84,10 @@ header nav ul li a{
 
 
 @media only screen and (max-width:900px){
+    .logo{
+        position: absolute;
+        left: 0;
+    }
     .bar{
         display: block;
         z-index: 5;
@@ -148,41 +153,6 @@ input[type="submit"]{
 }
 .main_wrapper{
     margin: 0 auto;
-}
-
-/* About us */
-.about{
-    color: var(--text-color);
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-.text{
-    width: 50%;
-}
-.text > *{
-    margin-top: 20px;
-}
-.text h1{
-    font-size: 50px;
-}
-.text p{
-    font-size: 20px;
-}
-.image_right{
-    margin-left: 30px;
-    height: 80%;
-    background-color: #ddd;
-    width: 50%;
-}
-#more{
-    background-color: var(--background-color);
-    border: none;
-    font-size: 18px;
-    padding: 10px 25px;
-    font-weight: bold;
-    border-radius: 20px;
 }
 
 

@@ -1,0 +1,152 @@
+
+/* About us */
+body{
+    background-color: var(--about-bg-color);
+}
+.about{
+    color: var(--text-color);
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.text{
+    width: 50%;
+    padding: 30px;
+    margin: 0 50px;
+}
+.text > *{
+    margin-top: 20px;
+}
+.text h1{
+    font-size: 50px;
+}
+.text p{
+    font-size: 20px;
+}
+.image_right{
+    background-color: var(--background-color);
+    border-radius: 20px;
+    height: 70vh;
+    margin-top: 50px;
+    z-index: -1;
+    width: 45%;
+    position: relative;
+}
+.image_right .graphic{
+    position: relative;
+    width: 900px;
+    left: -220px;
+    z-index: -1;
+    top: 40px;
+    height: 300px;
+}
+.image_right .txt{
+    color: var(--line-color);
+    position: absolute;
+    right: 0;
+    padding: 30px;
+    text-align: right;
+}
+.image_right .txt h4{
+    font-size: 26px;
+    font-weight: 500;
+}
+.image_right .txt p{
+    font-size: 14px;
+}
+.image_right .txt .update_btn{
+    padding: 5px 20px;
+    background-color:var(--body-color) ;
+    border: none;
+    color: var(--text-color);
+    margin-top: 8px;
+}
+.image_right .graphic img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit:contain ;
+}
+#more{
+    background-color: var(--background-color);
+    border: none;
+    font-size: 18px;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+@media only screen and (max-width:1600px){
+    .image_right .graphic{
+        width: 850px;
+    }
+}
+@media only screen and (max-width:1400px){
+    .image_right .graphic{
+        width: 800px;
+    }
+
+}
+@media only screen and (max-width:1300px){
+    .image_right .graphic{
+        width: 700px;
+        top: 60px;
+    }
+    .image_right {
+        height: 60vh;
+        margin-top:80px;
+    }
+
+}
+@media only screen and (max-width:1080px){
+    .about{
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+    .image_right{
+        width: 100%;
+        height: max-content;
+    }
+    .image_right .graphic{
+        position: relative;
+        width: 100%;
+        left: 0px;
+        top: 40px;
+        height: fit-content;
+    }
+    .image_right .graphic img{
+        position: relative;
+        width: 100%;
+        left: 0px;
+        min-width: 300px;
+    }
+    .logo{
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    .text{
+        width: 100%;
+        padding: 30px;
+        margin: -50px 50px;
+    }
+}
+@media only screen and (max-width:500px){
+    .image_right .txt{
+        text-align: center;
+        padding: 60px;
+        position: relative;
+    }
+    .image_right .txt h4{
+        font-size: 30px;
+        width: 100%;
+        font-weight: 500;
+    }
+    .image_right .txt p{
+        font-size: 16px;
+    }
+    .image_right .graphic img{
+        display: none;
+    }
+}
