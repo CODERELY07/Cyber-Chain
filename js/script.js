@@ -14,6 +14,7 @@ bar.addEventListener('click', function() {
         icon.classList.remove('fa-x');
         icon.classList.add('fa-bars');
         document.body.style.overflow = "auto";
+        nav.style.zIndex = "-1";
         
     } else {
         nav.style.opacity = "1";
@@ -21,9 +22,17 @@ bar.addEventListener('click', function() {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-x');
         document.body.style.overflow = "hidden";
+        nav.style.zIndex = "0";
     }
 });
 window.addEventListener('resize', function() {
     location.reload();
 });
 
+//url know more button
+const navigate = document.getElementById('knowmore');
+navigate.addEventListener("click", function(event){
+
+    console.log('hi')
+    window.location.href = "services.html";
+});

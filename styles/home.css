@@ -19,7 +19,11 @@ main h2{
     margin-top: 30px;
     font-weight: bold;
     background-color: var(--search-bg);
+    transition: transform 500ms ease-in-out;
     color: var(--text-color);
+}
+.more:hover{
+    transform: scale(1.1);
 }
 .man_img img{
     position: absolute;

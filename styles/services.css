@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     display: flex;
+    width: 100%;
 }
 .serviec_main_wrapper{
     width: 80%;
@@ -86,6 +87,20 @@
     justify-content: center;
     max-width: 100%;
     height: max-content;
+}
+div.featured_courses {
+    flex-basis:100%;
+    padding: 20px 160px;
+}
+@media only screen and (max-width:1200px) {
+    div.featured_courses {
+        padding: 20px 55px;
+    }
+}
+@media only screen and (max-width:870px) {
+    div.featured_courses {
+        padding: 20px 10px;
+    }
 }
 @media only screen and (max-width:400px) {
     .course_nav{

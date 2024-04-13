@@ -99,7 +99,16 @@ body{
     }
 
 }
-@media only screen and (max-width:1080px){
+@media only screen and (max-width:1070px){
+    .image_right .graphic{
+        position: relative;
+        width: 180%;
+        left: -80%;
+        top: 40px;
+        height: fit-content;
+    }
+}
+@media only screen and (max-width:900px){
     .about{
         height: 100%;
         flex-direction: column-reverse;
@@ -111,7 +120,7 @@ body{
     .image_right .graphic{
         position: relative;
         width: 100%;
-        left: 0px;
+        left: 0;
         top: 40px;
         height: fit-content;
     }
