@@ -92,6 +92,21 @@ main h2{
     bottom: 130px;
     object-fit: contain;
 }
+.bg{
+    top: 5%;
+    width: 50%;
+    min-width: 700px;
+    right: 0;
+    z-index: -5;
+    position: absolute;
+}
+.bg img{
+    width: 100%;
+    position: absolute;
+    object-position: right;
+    object-fit: cover;
+}
+
 @media only screen and (max-width:1450px){
     .img img{
         right: -170px;
@@ -126,6 +141,10 @@ main h2{
     }
     .img{
         display: none;
+    }
+    .bg{
+        top: 50%;
+        min-width: 500px;
     }
 }
 @media screen and (orientation: landscape) and (max-height:1100px) {

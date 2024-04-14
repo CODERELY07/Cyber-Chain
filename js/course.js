@@ -2,7 +2,18 @@
 const premiumBtn = document.getElementById('premiumBtn');
 const freeBtn = document.getElementById('freeBtn');
 const featureBtn = document.getElementById('featureBtn');
+let img = document.getElementById('change-img');
+let flexChange = document.querySelector('#flexChange');
 
+function changeImg(){
+    img.src = "img/service_man.png";
+}
+function changeImgP(){
+    img.src = "img/service_women.png";
+}
+function changeImgF(){
+    img.src = "img/service_man2.png";
+}
 // Line
 const line = document.getElementById("move-line");
 
@@ -49,16 +60,20 @@ premiumBtn.onclick = () => {
     slideIndex = 0;
     line.style.marginLeft = '0%';
     showSlide(slideIndex);
+    changeImgP();
 };
 
 freeBtn.onclick = () => {
     slideIndex = 1;
     line.style.marginLeft = '35%';
     showSlide(slideIndex);
+    changeImgF();
 };
 
 featureBtn.onclick = () => {
     slideIndex = 2;
     line.style.marginLeft = '70%';
     showSlide(slideIndex);
+    changeImg();
 };
+

@@ -7,6 +7,9 @@ body{
 .header1{
     font-size: 22px;
 }
+.logo{
+    position: relative;
+}
 .courses{
     margin-bottom: 30px;
     gap: 2rem;
@@ -95,10 +98,54 @@ div.featured_courses {
     flex-basis:100%;
     padding: 20px 160px;
 }
+.bg{
+    width: 100%;
+    position: absolute;
+    height: 800px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: -3;
+}
+.bg div::-webkit-scrollbar {
+    display: none;
+}
+  
+
+.bg div{
+    position: relative;
+    flex-basis: 50%;
+    overflow-x: hidden;
+}
+.bg div:nth-child(1) img{
+    width: 1100px;
+    position: absolute;
+    top: 140px;
+    z-index: -1;
+    height: 700px;
+    left: -40%;
+}
+.bg div img{
+    width: 1000px;
+}
+
+@media only screen and (max-width:1300px) {
+    .bg div:nth-child(1) img{
+        left: -80%;
+    }
+}
 @media only screen and (max-width:1200px) {
     div.featured_courses {
         padding: 20px 55px;
     }
+    .bg div:nth-child(1) img{
+        left: -90%;
+    }
+}
+@media only screen and (max-width:900px) {
+    .bg div:nth-child(1) img{
+        display: none;
+     }
 }
 @media only screen and (max-width:870px) {
     div.featured_courses {
