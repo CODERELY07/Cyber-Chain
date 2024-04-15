@@ -6,6 +6,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+a{
+    color: #fff;
+}
 :root{
     --body-color:#A0C0D8;
     --background-color:#fff;
@@ -35,7 +38,7 @@ header{
     justify-content: space-around;
 }
 .search{
-    flex-basis: 30%;
+    flex-basis: 25%;
     background-color: var(--search-bg);
     display: flex;
     padding: 1px 5px;
@@ -58,6 +61,9 @@ header{
     padding: 1px;
 
 }
+nav i{
+    margin-left: 10px;
+}
 .search i{
     color: var(--line-color);
     font-size: 14px;
@@ -70,7 +76,7 @@ header nav ul{
     align-items: center;
 }
 header nav ul li{
-    margin:0 20px;
+    margin:0 10px;
 }
 header nav ul li a{
     color: var(--line-color);
@@ -80,8 +86,24 @@ header nav ul li a{
 .bar{
     display: none;
 }
+.language_con{
+    display: flex;
+    gap: 10px;
+}
 
-
+@media only screen and (max-width:1000px){
+    .search{
+        flex-basis: 20%;
+        background-color: var(--search-bg);
+        display: flex;
+        margin: 0 10px;
+        padding: 1px 5px;
+        align-items: center;
+        border-radius: 20px;
+        gap: 5px;
+        justify-content: space-around;
+    }
+}
 @media only screen and (max-width:900px){
     .logo{
         position: absolute;

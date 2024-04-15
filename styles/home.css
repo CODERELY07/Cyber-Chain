@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 main{
     display: flex;
     height: 550px;
@@ -13,9 +16,18 @@ main h2{
     width: 70%;
     line-height: 40px;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+}
 .btn{
     border: none;
-    padding: 15px;
+    padding: 16px 0;
+    width:110px;
     margin-top: 30px;
     font-weight: bold;
     background-color: var(--search-bg);
@@ -70,10 +82,7 @@ main h2{
 .flex_around .companies_con:nth-child(3){
     bottom:-15px;
 }
-/* .img{
-    width: 100px;
-    height: 100px;
-} */
+
 .img {
     width: auto; /* Adjust width as needed */
     height: 100%;
@@ -147,7 +156,20 @@ main h2{
         min-width: 500px;
     }
 }
-@media screen and (orientation: landscape) and (max-height:1100px) {
+@media only screen and (max-width:400px) {
+    .logo{
+        margin-top: 30px;
+        display: flex;
+        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 800;
+    }
+}
+@media screen and (max-height:1500px) {
     .img{
         position: relative;
         bottom: -190px;

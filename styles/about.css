@@ -95,6 +95,7 @@ body{
     }
     .image_right {
         height: 60vh;
+        max-height: 460px;
         margin-top:80px;
     }
 

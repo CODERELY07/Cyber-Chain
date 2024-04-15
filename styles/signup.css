@@ -1,0 +1,60 @@
+body{
+    background-color: #6692B9;
+}
+.signup_wrapper{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: absolute;
+    font-weight: 800;
+}
+.signup_wrapper main img{
+    width: 450px;
+    margin: 50px auto;
+    display: block;
+}
+.signup_wrapper main{
+    width: 40%;
+    height: 100%;
+}
+.signup_wrapper main p{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+}
+aside{
+    padding: 20px 30px;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    border-radius: 50px;
+    right: 0;
+    background-color: #A0C0D8;
+}
+aside h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+aside .input-groups{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+aside .input-groups input{
+    width: 90%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgb(37, 40, 57,0.3);
+}
