@@ -28,6 +28,9 @@ body{
 .logo img{
     height: 60px;
 }
+.logo > *{
+    cursor: pointer;
+}
 header{
     padding: 20px 10px;
     display: flex;
@@ -277,6 +280,102 @@ input[type="submit"]{
     color: #fff;
     width: 30px;
 }
+
+/* Footer */
+.back{
+    background-color: #35496C;
+}
+footer{
+    display: flex;
+    padding:50px 30px;
+    max-width: 1400px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.foot-logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    text-align: center;
+}
+.foot-logo h1{
+    font-weight: 400;
+    width: 100px;
+    margin-left: -40px;
+    font-size: 20px;
+}
+.foot-flex input{
+    border-radius: 20px;
+    border: none;
+    background-color: #1e2530;
+    padding: 10px 15px;
+    width: 100%;
+    color: #ddd;
+}
+.foot-flex button{
+    border-radius: 20px;
+    border: none;
+    background-color: #1e2530;
+    width: max-content;
+    color: #ddd;
+    padding: 8px;
+    text-transform: uppercase;
+}
+.foot-flex{
+    gap: 20px;
+    display: flex;
+    border-right: 2px solid #fff;
+    padding-right: 20px;
+    width: 25%;
+    align-items: center;
+    min-width: 250px;
+    flex-direction: column;
+}
+.foot-logo img{
+    width: 130px;
+}
+.footer-links{
+    padding: 0 40px;
+    display: flex;
+    width: 50%;
+    gap: 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.footer-social svg{
+    width: 25px;
+}
+.footer-social{
+    display: flex;
+    width: 100%;
+    margin-top: -110px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+footer ul{
+    margin: 5px;
+}
+footer ul li {
+    color: #fff;
+    font-weight: 600;
+}
+footer ul li a{
+    color: #fff;
+    font-weight: lighter;
+    margin: 5px;
+}
+.language{
+    display: flex;
+    margin-top: 5px;
+    gap: 5px;
+}
+.language option,
+.language i{
+    color: #fff;
+}
 @media only screen and (max-width:900px) {
     .horizontal_line{
         display: none;
@@ -294,6 +393,32 @@ input[type="submit"]{
         position: relative;
     }
 }
+@media only screen and (max-width:580px){
+    .footer-links{
+        padding: 50px 0px;
+        display: flex;
+        width: 100%;
+        gap: 140px;
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    .foot-flex{
+        border-right:none;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .foot-logo{
+        margin-left: -30px;
+    }
+    .foot-logo h1{
+        width: 20%;
+        margin-left: -10px;
+        font-size: 24px;
+    }
+    footer ul{
+        margin: 30px 0;
+    }
+}
 @media only screen and (max-width:450px) {
     .contact_wrapper{
         width: 95%;
@@ -307,5 +432,8 @@ input[type="submit"]{
     }
     .contact_side img{
         top: 0px;
+    }
+    .footer-links{
+        gap: 60px;
     }
 }
