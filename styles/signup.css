@@ -179,3 +179,20 @@ svg{
         height: 600px;
     }
 }
+@media only screen and (max-width:500px) {
+    body{
+        margin: 100px 0;
+    }
+    aside{
+        width: 95%;
+    }
+    aside .input-groups{
+        width: 100%;
+    }
+    aside .input-groups input:not(input[type ="checkbox"]){
+        width: 100%;
+    }
+    .input-groups i{
+        right: 1%;
+    }
+}

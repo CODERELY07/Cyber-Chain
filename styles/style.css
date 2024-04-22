@@ -284,10 +284,13 @@ input[type="submit"]{
 /* Footer */
 .back{
     background-color: #35496C;
+    height: 540px;
+    position: relative;
+    bottom: 0;
 }
 footer{
     display: flex;
-    padding:50px 30px;
+    padding:50px 30px 0px;
     max-width: 1400px;
     justify-content: center;
     flex-wrap: wrap;
@@ -346,11 +349,14 @@ footer{
 }
 .footer-social svg{
     width: 25px;
+    height: 40px;
+    z-index: -1;
 }
 .footer-social{
     display: flex;
     width: 100%;
-    margin-top: -110px;
+    margin-top: 0px;
+    height: 100px;
     align-items: center;
     justify-content: center;
     gap: 40px;
