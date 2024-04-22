@@ -284,8 +284,6 @@ input[type="submit"]{
 /* Footer */
 .back{
     background-color: #35496C;
-    position: relative;
-    bottom: 0;
 }
 footer{
     display: flex;
