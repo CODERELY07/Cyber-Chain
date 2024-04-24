@@ -1,0 +1,102 @@
+.logo{
+    margin-left: -20px;
+    top: 0;
+}
+body{
+    padding: 20px 20px 50px;
+}
+.img{
+    width: 100%;
+    cursor: pointer;
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.main > div h2{
+        font-size: 35px;
+        color: #35496C;
+        width: 100%;
+        
+        margin: 0 0px;
+        text-align: center;
+}
+.main{
+    margin-top: 100px;
+}
+.aside .btn{
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    padding: 10px;
+    z-index: 999;
+    width: 100%;
+    background-color:#35496C ;
+    color: #fff;
+}
+.aside .btn:hover{
+    background-color:rgb(53, 73, 108,0.8) ;
+}
+
+.white {
+    background-color: #E6F1F7;
+    padding: 20px;
+    line-height: 40px;
+    border-radius: 50px;
+    max-height: max-content;
+    max-height: 600px;
+    overflow: scroll;
+}
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+}
+
+.privacy div.white h2{
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: 100%;
+}
+.white p {
+    width: 85%;
+    font-size: 28px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+@media only screen and (min-width:900px){
+    .main{
+        display: flex;
+        position: relative;
+    }
+    .main > div{
+        width: 50%;
+    }
+    .main > div h2{
+        width: 50%;
+        margin: 0 100px;
+    }
+    .img{
+        width: 700px;
+        z-index: 99;
+        left: -100px;
+        top:80px;
+        position: absolute;
+    }
+    .aside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    }
+    .aside .btn{
+        font-size: 20px;
+    }
+}

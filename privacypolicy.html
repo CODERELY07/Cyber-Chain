@@ -5,100 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        .logo{
-            margin-left: -20px;
-            top: 0;
-        }
-        body{
-            padding: 20px;
-        }
-        .img{
-            width: 100%;
-        }
-        .aside{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        
-        }
-        .main > div h2{
-                font-size: 35px;
-                color: #35496C;
-                width: 100%;
-                margin: 0 0px;
-                text-align: center;
-        }
-        .main{
-            margin-top: 100px;
-        }
-        .aside .btn{
-            font-size: 18px;
-            border-radius: 50px;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            background-color:#35496C ;
-            color: #fff;
-        }
-        .aside .btn:hover{
-            background-color:rgb(53, 73, 108,0.8) ;
-        }
-        @media only screen and (min-width:900px){
-            .main{
-                display: flex;
-                position: relative;
-            }
-            .main > div{
-                width: 50%;
-            }
-            .main > div h2{
-                width: 50%;
-                margin: 0 100px;
-            }
-            .img{
-                width: 700px;
-                z-index: -1;
-                left: -100px;
-                top:80px;
-                position: absolute;
-            }
-            .aside{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        
-            }
-            .aside .btn{
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/privacy.css">
 </head>
 <body>
-    <div class="wrapper privacy">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="">
-            </a>
+<div class="wrapper privacy">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.png" alt="">
+        </a>
+    </div>
+
+    <div class="main">
+        <div>
+            <h2>Quantum Tech Privacy Policy</h2>
+            <img class="img" src="img/privacy.png" alt="" id="back">
         </div>
 
-        <div class="main">
-            <div>
-                <h2>Quantum Tech Privacy Policy</h2>
-                <img class="img" src="img/privacy.png" alt="">
-            </div>
-        
-
-            <div class="aside">
-                <button class="btn">01. INTRODUCTION</button>
-                <button class="btn">02. COLLECTED INFORMATION</button>
-                <button class="btn">03. DATA USAGE</button>
-                <button class="btn">04. THIRD-PARTY SERVICES</button>
-                <button class="btn">05. COOKIES AND TRACKING</button>
-                <button class="btn">06. PAYMENT INFORMATION</button>
-            </div>
+        <div class="aside"  id="change">
+            <button class="btn">01. INTRODUCTION</button>
+            <button class="btn">02. COLLECTED INFORMATION</button>
+            <button class="btn">03. DATA USAGE</button>
+            <button class="btn">04. THIRD-PARTY SERVICES</button>
+            <button class="btn">05. COOKIES AND TRACKING</button>
+            <button class="btn">06. PAYMENT INFORMATION</button>
         </div>
     </div>
+</div>
+
+<script>
+    let buttons = document.querySelectorAll('.btn');
+    let change = document.getElementById('change');
+    let back = document.getElementById('back');
+
+    buttons.forEach(function(button, index) {
+        button.addEventListener('click', function() {
+            let content = '';
+            switch (index + 1) {
+                case 1:
+                    content = "<div class='white'><h2> 01. INTRODUCTION </h2> <p>Welcome to Quantum Tech E-Learning Platform, where we prioritize the privacy and security of our users. This Privacy Policy outlines how we collect, use, and protect your information.</p></div>";
+                    break;
+                case 2:
+                    content = "<div class='white'><h2> 02. COLLECT INFORMATION </h2> <p>We may collect personal information such as names, email addresses, and educational backgrounds, as well as non-personal information like usage data and analytics to enhance your learning experience.</p></div>";
+                    break;
+                case 3:
+                    content = "<div class='white'><h2> 03. DATA USAGE </h2> <p>Your data is used to personalize learning content, improve our services, and ensure a seamless educational experience tailored to your needs.</p></div>";
+                    break;
+                case 4:
+                    content = "<div class='white'><h2> 04. Third-party services  </h2> <p>We may utilize third-party services, and users are encouraged to review the privacy policies of these services, understanding their practices and implications.</p></div>";
+                    break;
+                case 5:
+                    content = "<div class='white'><h2> 05. cookies and tracking technology  </h2> <p>We use cookies and similar technologies to enhance user experience. Users can manage cookie preferences through their browser settings.</p></div>";
+                    break;
+                case 6:
+                    content = "<div class='white'><h2> 06. PAYMENT INFORMATION  </h2> <p>For payment transactions, we utilize secure processing methods, and your payment information is handled with the utmost confidentiality.</p></div>";
+                    break;
+                default:
+                    break;
+            }
+            change.innerHTML = content;
+        });
+    });
+
+    back.onclick = function(){
+        window.location.reload();
+    }
+</script>
 </body>
 </html>
