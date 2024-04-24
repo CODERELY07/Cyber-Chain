@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .logo{
+            margin-left: -20px;
+            top: 0;
+        }
+        body{
+            padding: 20px;
+        }
+        .img{
+            width: 100%;
+        }
+        .aside{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        
+        }
+        .main > div h2{
+                font-size: 35px;
+                color: #35496C;
+                width: 100%;
+                margin: 0 0px;
+                text-align: center;
+        }
+        .main{
+            margin-top: 100px;
+        }
+        .aside .btn{
+            font-size: 18px;
+            border-radius: 50px;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            background-color:#35496C ;
+            color: #fff;
+        }
+        .aside .btn:hover{
+            background-color:rgb(53, 73, 108,0.8) ;
+        }
+        @media only screen and (min-width:900px){
+            .main{
+                display: flex;
+                position: relative;
+            }
+            .main > div{
+                width: 50%;
+            }
+            .main > div h2{
+                width: 50%;
+                margin: 0 100px;
+            }
+            .img{
+                width: 700px;
+                z-index: -1;
+                left: -100px;
+                top:80px;
+                position: absolute;
+            }
+            .aside{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        
+            }
+            .aside .btn{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper privacy">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="main">
+            <div>
+                <h2>Quantum Tech Privacy Policy</h2>
+                <img class="img" src="img/privacy.png" alt="">
+            </div>
+        
+
+            <div class="aside">
+                <button class="btn">01. INTRODUCTION</button>
+                <button class="btn">02. COLLECTED INFORMATION</button>
+                <button class="btn">03. DATA USAGE</button>
+                <button class="btn">04. THIRD-PARTY SERVICES</button>
+                <button class="btn">05. COOKIES AND TRACKING</button>
+                <button class="btn">06. PAYMENT INFORMATION</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
