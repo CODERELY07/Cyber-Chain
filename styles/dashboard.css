@@ -1,0 +1,372 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div.logo{
+            position: relative;
+            display: none;
+            z-index: 1;
+        }
+        body{
+            background-color: #58779C;
+        }
+        ul {
+            list-style: none;
+            background-color: #58779C;
+            padding-bottom: 40px;
+        }
+        .dashboard{
+            width: max-content;
+            height: 100vh;
+            position: relative;
+            margin-top: 0px;
+            background-color: #58779C;
+        }
+        li {
+            padding: 20px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        li i{
+            color: #292F33;
+            margin-right:20px ;
+            font-size: 30px;
+        }
+        li:hover {
+            background-color: lightblue;
+        }
+        .hidden {
+            display: none;
+        }
+        .dashboard img{
+            margin-top: 80px;
+        }
+        .welcome{
+            background-color: #E6F1F7;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 30px;
+            position: relative;
+            width: 90%;
+            height: max-content;
+            background-image: url('img/welcom.png');
+            background-position: center right;
+            background-size: 20vw;
+            background-repeat: no-repeat;
+        }
+        .welcome p,
+        .welcome h2{
+            width: 60%;
+            line-height: 25px;
+            margin: 20px;
+        }
+        .welcome h2{
+            margin: 20px 0;
+        }
+        .welcome button{
+           margin: 25px auto;
+           background-color: #343E57;
+           display: block;
+           color: #fff;
+           padding: 5px 25px;
+           border: none;
+           border-radius: 20px;
+        }
+        .upgrade{
+            display: block;
+            margin: 0 auto;
+            padding: 8px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+        }
+        .wrapper{
+            display: flex;
+        }
+        .main{
+            background-color: #A0C0D8;
+            width: 50%;
+            top: 0;
+            border-radius: 40px;
+            left: 30%;
+            position: absolute;
+            height: max-content;
+        }
+        #bar{
+            font-size: 24px;
+            margin: 0 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+        .progress-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+            gap: 20px;
+            margin: 50px auto;
+        }
+        .progress-item {
+            width: max-content;
+            margin-bottom: 1rem;
+            background-color: #35496C;
+            padding: 0 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+        .progress-item:last-child{
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 0 13px;
+            border-radius: 50%;
+        }
+        .progress-label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            margin: 15px;
+        }
+        .progress-value {
+            color: #000;
+            background-color: #fff;
+            border-radius: 50%;
+            height: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;   
+            position: relative;         
+        }
+        .progress-value {
+            color: #000;
+            background-color: #fff;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .progress-value.tf::after {
+            content: "";
+            border: 3px solid transparent; /* Adjust the width of the border */
+            border-top-color: #ffff; /* Set the color of the top border */
+            border-radius: 50%;
+            position: absolute;
+            top: -2px;
+            left: -3px;
+            width: calc(100% + 10px); /* Adjust width to include the border width */
+            height: calc(100% + 0px); /* Adjust height to include the border width */
+            transform-origin: center; /* Set the origin of the rotation to the center */
+            transform: rotate(50deg); /* Rotate the pseudo-element by 20 degrees */
+        }
+        .progress-value.five::after {
+            content: "";
+            border: 3px solid transparent;
+            border-top-color: #ffff; 
+            border-radius: 50%;
+            position: absolute;
+            top: -3px;
+            left: 7px;
+            width: calc(70% + 1px); 
+            height: calc(90% + 0px);
+            transform-origin: center;
+            transform: rotate(20deg);
+        }
+        .progress-value.ten::after {
+            content: "";
+            border: 3px solid transparent; 
+            border-top-color: #ffff; 
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            left: 10px;
+            width: calc(50% + 1px); 
+            height: calc(50% + 0px); 
+            transform-origin: center; 
+            transform: rotate(20deg); 
+        }
+
+        .classes{
+            display: flex;
+            gap: 30px;
+            margin: 0px auto 50px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .box{
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px 5px;
+            display: flex;
+            text-align: center;
+            max-width: 170px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box img{
+            width: 100%;
+            
+        }
+        .title{
+            margin: 10px 20px;
+            font-weight: 600;
+        }
+        .notification{
+            left:0px;
+            position: relative;
+            font-size: 24px;
+        }
+        .notication-content img{
+            width: 80px;
+            height: 80px;
+            clip-path: circle();
+        }
+        .notication-content{
+            position: absolute;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            top: 0;
+            right: 0;
+            background-color: #E6F1F7;
+            padding-bottom: 30px;
+            width: 60%;
+            max-width:300px;
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .profile-info{
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-info span{
+            color:#14244A ;
+            font-size: 14px;
+        }
+        .bor{
+            border: 1px solid #343E57;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .bio{
+            text-align: center;
+        }
+        .bio p{
+            padding: 5px;
+        }
+        .forums h5{
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px ;
+            margin-bottom: -30px;
+            color: #343E57;
+        }
+        .box-forums{
+            width:82%;
+            background-color: #58779C;
+            padding: 20px;
+            border-radius: 40px;
+        }
+        .box-forums p{
+            text-align: justify;
+        }
+        .box-forums h6{
+            text-align: left;
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-top: -40px;
+        }
+        .forums{
+            color: #fff;
+            display: flex;
+            gap: 50px;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .forums button{
+            border: none;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 40px;
+            background-color: #58779C;
+            color: #ffff;
+        }
+        .icons{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .flex-forums{
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            left: -20px;
+            align-items: center;
+            top: -40px;
+            font-size: 13px;
+        }
+        /* active */
+        .notication-content.small {
+            width: 15%;
+            overflow: hidden;
+        }
+        
+        @media only screen and (max-width:900px){
+            .main{
+                width: 100%;
+                left: 0;
+                top: 0;
+            }
+            .dashboard{
+                left: 0;
+            }
+        }
+        @media only screen and (max-width:500px){
+            .notication-content{
+            position: absolute;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            top: 0;
+            right: 0;
+            background-color: #E6F1F7;
+            padding-bottom: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+        }
+        @media only screen and (min-width:900px){
+            #bar{
+            font-size: 24px;
+            margin: 0 0px;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            z-index: 99;
+        }
+        }

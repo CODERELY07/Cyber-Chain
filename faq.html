@@ -19,8 +19,13 @@
             z-index: 99;
             position: relative;
         }
+        .aside .btn::-webkit-scrollbar {
+            display: none;
+        }
+
         .aside .btn{
             font-size: 24px;
+            overflow: scroll;
             border-radius: 50px;
             border: none;
             height: 70px;
@@ -39,64 +44,75 @@
             gap: 40px;
 
         }
-
-.main{
-    margin-top: 100px;
-}
-
-.bg-blue {
-    display: none;
-}
-@media only screen and (min-height:400px){
-    .bg-blue {
-    display: none;
-}
-}
-@media only screen and (min-width:900px){
-    .bg-blue {
-    background-color: #A0C0D8;
-    position: fixed;
-    height: 1000px;
-    width: 40%;
-    display: block;
-    bottom: 0;
-    right: -200px;
-    transform: skewX(-10deg); /* Adjust the angle as needed */
-    transform-origin: top right; /* Set the origin to the top right corner */
-}
-    .main{
-        display: flex;
-        position: relative;
-        margin: 200px auto;
-    }
-    .img{
-        width: 800px;
-        position: relative;
-        right: -80px;
-        bottom: -100px;
-    }
-    .main > div{
-        width: 50%;
-    }
-    .main > div h2{
-        width: 50%;
-        margin: 0 100px;
-    }
-    .aside .btn{
-            font-size: 20px;
-            border-radius: 50px;
-            border: none;
-            padding: 0px 20px;
-            margin-left: 120px;
-            z-index: 999;
-            width: 85%;
-            background-color:#35496C ;
-            color: #fff;
+        #faqs{
+            width: 800px;
+            position: absolute;
+            left: 30%;
+            display: none;
         }
-    .aside .btn{
-        font-size: 20px;
-    }
-}
+        .main{
+            margin-top: 100px;
+        }
+
+        .bg-blue {
+            display: none;
+        }
+        @media only screen and (min-height:400px){
+            .bg-blue {
+            display: none;
+        }
+     
+        }
+        @media only screen and (min-width:900px){
+            .bg-blue {
+            background-color: #A0C0D8;
+            position: fixed;
+            height: 1000px;
+            width: 40%;
+            display: block;
+            bottom: 0;
+            right: -200px;
+            transform: skewX(-10deg); /* Adjust the angle as needed */
+            transform-origin: top right; /* Set the origin to the top right corner */
+            
+         }
+         #faqs{
+            display: block;
+        }
+            .main{
+                display: flex;
+                position: relative;
+                margin: 200px auto;
+            }
+            .img{
+                width: 800px;
+                position: relative;
+                right: -80px;
+                bottom: -100px;
+            }
+            .main > div{
+                width: 50%;
+            }
+            .main > div h2{
+                width: 50%;
+                margin: 0 100px;
+            }
+            .aside .btn{
+                    font-size: 20px;
+                    border-radius: 50px;
+                    border: none;
+                    padding: 0px 20px;
+                    margin-left: 120px;
+                    z-index: 999;
+                    width: 85%;
+                    background-color:#35496C ;
+                    color: #fff;
+                }
+            .aside .btn{
+                font-size: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -117,7 +133,7 @@
             <button class="btn">Can I access course materials offline?</button>
             <button class="btn">How do I track my progress in a course?</button>
         </div>
-
+        <img src="img/faqs.png" alt="" id="faqs">
         <div>
             <img class="img" src="img/faq.png" alt="" id="back">
         </div>
