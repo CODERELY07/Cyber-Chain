@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/dashboard.css">
+    <script defer src="js/dashboard.js"></script>
 </head>
 <body>
     <span class="hide" id="bar"><i onclick="showDashboard()" class="fa-solid fa-bars"></i></span>
@@ -78,10 +79,123 @@
                 </div>
             </div>
 
-            <div id="Calendar" class="hidden">
-                <h2>Calendar</h2>
-            </div>
+            <div id="Calendar" class="hidden calendar">
+                <div class="task">
+                    <h2>Tasks</h2>
+                    <div class="box-wrapper">
+                        <div class="box">
+                            <strong>5</strong>
+                            <strong>OFFICIAL</strong>
+                        </div>
+                        <div class="box">
+                            <strong>3</strong>
+                            <strong>PERSONAL</strong>
+                        </div>
+                    </div>
+                    <div class="Weekly">
+                        <div>
+                            <span>Weekly</span>
+                            <span>Pinned</span>
+                        </div>
+                        <div class="buttons">
+                            <i class="fa-solid fa-thumbtack"></i>
+                            <p>Attend Ai live webinar</p>
+                        </div>
+                        <div class="buttons">
+                            <i class="fa-solid fa-thumbtack"></i>
+                            <p>Submission of AI proj</p>
+                        </div>
+                    </div>
+                    <div class="tasks">
+                        <h3>Add Task</h3>
+                        <div class="box-task">
+                            <div class="title">TITLE</div>
+                            <div class="inputs">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span class="date">04/19/24</span> to <span class="date">05/01/24</span>
+                            </div>
+                            <p>Every weekend</p>
+                            <div class="inputs">
+                                <input type="radio" name="" id="">
+                                <span>Personal</span>
+                                <input type="radio" name="" id="">
+                                <span>Official</span>
+                            </div>
+                            <div class="notes">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Add notes..."></textarea>
+                            </div>
+                        </div>
+                        <div class="save_button">
+                            <button>Save</button>
+                            <button>Cancel</button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="schedule">
+                    <div class="top">
+                        <strong>Tuesday's Schedule</strong>
+                        <h2>2024</h2>
+                    </div>
+                    <div class="month">
+                        March
+                    </div>
+                    <div class="dates">
+                        <table>
+                            <tr>
+                                <td>SUN</td>
+                                <td>MON</td>
+                                <td>TUE</td>
+                                <td>WES</td>
+                                <td>THU</td>
+                                <td>FRI</td>
+                                <td>SAT</td>
+                            </tr>
+                       
+                            <tr>
+                                <td><strong>01</strong></td>
+                                <td><strong>02</strong></td>
+                                <td><strong>03</strong></td>
+                                <td><strong>04</strong></td>
+                                <td><strong>05</strong></td>
+                                <td><strong>06</strong></td>
+                                <td><strong>07</strong></td>
+                        </table>
+                    </div>
+
+                    <div class="task-complete">
+                        <strong>TASK</strong>
+                        <div class="task-boxes">
+                            <div class="time">
+                                <strong>7 AM</strong>
+                                <strong>10 AM</strong>
+                                <strong>1 AM</strong>
+                                <strong>3 AM</strong>
+                            </div>
+                            <div class="the-task">
+                                <div class="boxes">
+                                    <p>Machine Learning Class</p>
+                                    <strong>7:00AM - 9:30AM</strong>
+                                </div>
+                                <div class="boxes">
+                                    <p>Cloud Computing Class</p>
+                                    <strong>10:00 AM - 12:00PM</strong>
+                                </div>
+                                <div class="boxes">
+                                    <p>Blockchain  Project Meeting</p>
+                                    <strong>1 :00PM - 2 :00PM</strong>
+                                </div>
+                                <div class="boxes">
+                                    <p>AI Live Webinar</p>
+                                    <strong>3:00 PM-5:00PM</strong>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div id="Achievements" class="hidden">
                 <h2>Achievements</h2>
             </div>
@@ -101,7 +215,7 @@
                 <i class="fa-solid fa-bell"></i>
             </div>
             <div class="profile-pic" id="index3">
-                <img src="img/box2.png" alt="">
+                <img src="img/profile.jpg" alt="">
             </div>
             <div class="profile-info" id="index4">
                 <strong>MARK JERRIAN</strong>
@@ -117,7 +231,7 @@
 
             <div class="box-forums">
                 <div class="flex-forums">
-                    <img src="img/box2.png" alt="">
+                    <img src="img/profile.jpg" alt="">
                     <strong>MARK JERRIAN</strong>
                 </div>
                 <div class="box-content">
@@ -141,7 +255,7 @@
             </div>
             <div class="box-forums">
                 <div class="flex-forums">
-                    <img src="img/box2.png" alt="">
+                    <img src="img/profile.jpg" alt="">
                     <strong>MARK JERRIAN</strong>
                 </div>
                 <div class="box-content">
@@ -169,68 +283,5 @@
 
 
     </div>
-    <script>
-          let dash = document.getElementById('dash');
-        let isDashboardVisible = true;
-        let logo = document.getElementById('log');
-       
-        function toggleSection(sectionId) {
-            var sections = document.querySelectorAll('.hidden');
-            sections.forEach(function(section) {
-                section.style.display = 'none';
-            });
-
-            if (sectionId === 'Calendar') {
-                document.getElementById(sectionId).style.display = 'block';
-                document.getElementById('Dasboard').style.display = 'none';
-            } else {
-                document.getElementById(sectionId).style.display = 'block';
-                document.getElementById('Calendar').style.display = 'none';
-            }
-            document.getElementById('dash').style.display = 'none';
-        }
-
-
-
-        function showDashboard() {
-            if (isDashboardVisible) {
-                dash.style.display = "none";
-                logo.style.display = "none";
-                isDashboardVisible = false;
-            } else {
-                dash.style.display = "block";
-                logo.style.display = "block";
-                dash.style.zIndex = "2";
-                dash.style.height = "100vh";
-                dash.style.top = "-50px";
-                dash.style.position = "absolute";
-                isDashboardVisible = true;
-            }
-        }
-        let index = document.getElementById('index');
-        let index2 = document.getElementById('index2');
-        let index3 = document.getElementById('index3');
-        let index4 = document.getElementById('index4');
-        function notifToggle() {
-           
-            var notificationContent = document.querySelector('.notication-content');
-            if (notificationContent.classList.contains('small')) {
-                notificationContent.style.display = "block";
-                notificationContent.classList.remove('small');
-                index.style.display = "block";
-                index2.style.display = "flex";
-                index3.style.display = "flex";
-                index4.style.display = "flex";
-            } else {
-                index.style.display = "none";
-                index2.style.display = "none";
-                index3.style.display = "none";
-                index4.style.display = "none";
-                console.log(index)
-                notificationContent.classList.add('small');
-            }
-        }
-
-    </script>
 </body>
 </html>
