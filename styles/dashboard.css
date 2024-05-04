@@ -278,6 +278,10 @@
         .bio p{
             padding: 5px;
         }
+
+        .box-content p{
+            font-style: italic;
+        }
         .forums h5{
             text-align: center;
             font-size: 18px;
@@ -339,10 +343,6 @@
         }
 
         /* Calendar */
-        
-        .welcome{
-            background-image: url('img/welcom.png');
-        }
         .task{
             background-color: #343E57;
             color: #fff;
@@ -581,56 +581,159 @@
     display: block; 
     margin-top: 5px; 
   }
-  
-  
+  #goal{
+    display: none;
+  }
+  #forums{
+    display: block;
+  }
+  .progress-circle {
+    position: relative;
+    width: 150px;
+    padding: 50px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    }
+
+    .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 100%;
+    border-radius: 50%;
+    border: 9px solid #97BCDC; 
+    background-color: rgb(246, 238, 228);
+    }
+
+    .progress-right {
+    clip: rect(auto, 50%, auto, auto); 
+    border-right-color: #343E57; 
+    }
+
+    .progress-left {
+    clip: rect(auto, auto, auto, 50%); 
+    border-left-color: #343E57; 
+    }
+
+    .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    }
+    .goal-flex{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    }
+    .goal-flex strong:first-child{
+    font-size: 18px;
+    }
+    .robot{
+    display: flex;
+    width: 80%;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px ;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #97BCDC;
+    padding-left: 30px;
+    }
+    .robot p{
+    font-weight: 600;
+    margin: 4px 0;
+    }
+    .robot p:last-child,
+    .robot p:first-child {
+    color: #14244A;
+    }
+    .robot p:nth-child(2){
+    color: #fff;
+    }
+    .goal-flex button{
+    background-color: #97BCDC;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: none;
+    }
+    .robot img{
+    width:180%;
+    left: -120px;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+    height: 20%;
+    }
+
+
         
-        @media only screen and (max-width:1200px){
-            .main{
-                width: 100%;
-                left: 0;
-                top: 0;
-            }
-            .dashboard{
-                left: 0;
-            }
-        }
-        @media only screen and (max-width:500px){
-            .notication-content{
-            position: absolute;
-            border-top-left-radius: 40px;
-            border-bottom-left-radius: 40px;
-            top: 0;
-            right: 0;
-            background-color: #E6F1F7;
-            padding-bottom: 30px;
+    @media only screen and (max-width:1200px){
+        .main{
             width: 100%;
-            max-width: 400px;
-        }
-   
-        }
-        @media only screen and (min-width:900px){
-            #bar{
-            font-size: 24px;
-            margin: 0 0px;
-            position: absolute;
+            left: 0;
             top: 0;
-            left: 5%;
-            z-index: 99;
         }
+        .dashboard{
+            left: 0;
         }
-        @media only screen and (max-width:750px){
-            .calendar > *{
-                width: 100%;
-            }
-            .calendar {
-                display: flex;
-                flex-direction: column;
-            }
+    }
+    @media only screen and (max-width:500px){
+        .notication-content{
+        position: absolute;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        top: 0;
+        right: 0;
+        background-color: #E6F1F7;
+        padding-bottom: 30px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    }
+    @media only screen and (min-width:900px){
+        #bar{
+        font-size: 24px;
+        margin: 0 0px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        z-index: 99;
+    }
+    }
+    @media only screen and (max-width:750px){
+        .calendar > *{
+            width: 100%;
         }
-        @media only screen and (max-width:800px){
-            .main{
-                min-width: 0px;
-            }
+        .calendar{
+            flex-direction: column;
         }
+    }
+    @media only screen and (max-width:800px){
+        .main{
+            min-width: 0px;
+        }
+    }
+    @media only screen and (max-width:500px){
+        .robot img{
+        width:180%;
+        left: -60%;
+        top: 0px;
+        bottom: 0px;
+        position: relative;
+        height: 20%;
+        }
+    }
 
 

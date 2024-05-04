@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/dashboard.css">
     <script defer src="js/dashboard.js"></script>
+    <style>              
+        .welcome{
+            background-image: url('img/welcom.png');
+        }
+    </style>
 </head>
 <body>
     <span class="hide" id="bar"><i onclick="showDashboard()" class="fa-solid fa-bars"></i></span>
@@ -196,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div id="Achievements" class="hidden">
+            <!-- <div id="Achievements" class="hidden">
                 <h2>Achievements</h2>
             </div>
 
@@ -206,10 +211,10 @@
 
             <div id="Setting" class="hidden">
                 <h2>Setting</h2>
-            </div>
+            </div> -->
         </div>
     </div>
-    <div class="notication-content">
+    <div class="notication-content" id="forums">
         <div class="profile">
             <div class="notification" onclick="notifToggle()" id="notif">
                 <i class="fa-solid fa-bell"></i>
@@ -222,14 +227,14 @@
                 <span>STUDENT</span>
             </div>
         </div>
-        <div class="bio" id="index">
+        <div class="bio none" id="index">
             <p>"Bio bio bio bio bio bio bio "</p>
             <div class="bor"></div>
         </div>
-        <div class="forums" id="index2">
+        <div class="forums none" id="index2">
             <h5>Forums</h5>
 
-            <div class="box-forums">
+            <div class="box-forums none">
                 <div class="flex-forums">
                     <img src="img/profile.jpg" alt="">
                     <strong>MARK JERRIAN</strong>
@@ -253,7 +258,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box-forums">
+            <div class="box-forums none">
                 <div class="flex-forums">
                     <img src="img/profile.jpg" alt="">
                     <strong>MARK JERRIAN</strong>
@@ -278,10 +283,46 @@
                 </div>
             </div>
 
-            <button>VIEW OTHERS FORUMS </button>
+            <button class="none">VIEW OTHERS FORUMS </button>
         </div>
-
-
     </div>
+
+
+    <div class="notication-content noti" id="goal">
+        <div class="profile">
+            <div class="notification" onclick="notifToggle2()" id="notif">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="profile-pic" id="hide2">
+                <img src="img/profile.jpg" alt="">
+            </div>
+            <div class="profile-info" id="hide3">
+                <strong>MARK JERRIAN</strong>
+                <span>STUDENT</span>
+            </div>
+        </div>
+        <div class="goal-flex " id="hide1">
+            <strong>Goal</strong>
+            <div class="progress-circle">
+                <div class="progress progress-right"></div>
+                <div class="progress progress-left"></div>
+                <div class="progress-text">70%</div>
+            </div>
+            <strong>3:00-5:00PM</strong>
+            <div class="robot">
+               
+                <p>Live Webinar</strong>
+                <p class="color_white">Introduction to
+                    Artificial Intelligence </p>
+                <p>In QuantumTech </p>
+                <img src="img/robot.png" alt="">
+            </div>
+            <button class="blue_button">No upcoming task</button>
+        </div>
+          
+          
+    </div>
+
+    
 </body>
 </html>
